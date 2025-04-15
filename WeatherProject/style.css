@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('ProjImages/BackGround.png');
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    position: relative;
+    width: 400px;
+    height: 100px;
+    background: rgb(245,245,245,0.1);
+    backdrop-filter: blur(30px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 16px;
+    padding: 20px;
+    color: #fff;
+    transition: height .6s ease;
+}
+.searchBox{
+    position: relative;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+.searchBox i{
+    position: absolute;
+    left: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.searchBox input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    outline: none;
+    border-radius: 10px;
+    font-size: 22px;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0 48px 0 42px;
+}
+.searchBox input{
+    color: #fff;
+    text-transform: capitalize;
+}
+.searchBox button{
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    color: rgba(243, 243, 243, 0.986);
+    padding: 0 40px 0 5px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+}
+.weatherBox{
+    text-align: center;
+    margin: 10px 0;
+}
+.weatherBox,
+.weatherDetails,
+.notFound{
+    overflow: hidden;
+    visibility: hidden;
+}
+.weatherBox.active,
+.weatherDetails.active,
+.notFound.active{
+    visibility: visible;
+}
+.weatherBox .box,
+.notFound .box{
+    transform: translate(-100%);
+}
+.weatherBox.active .box,
+.notFound.active .box{
+    transform: translateY(0%);
+    transition: transform 1s ease;
+    transition-delay: .6s;
+}
+.weatherBox img{
+    width: 60%;
+}
+.weatherBox .temperature{
+    position: relative;
+    font-size: 64px;
+    line-height: 1;
+    font-weight: 700;
+    margin: 20px 0 6px -30px;
+}
+.weatherBox .temperature span{
+    position: absolute;
+    font-size: 24px;
+    margin-left: 4px;
+}
+.weatherBox .description{
+    position: relative;
+    font-size: 22px;
+    font-weight: 500;
+}
+.weatherDetails{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+}
+.Alert{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    visibility: hidden;
+}
+.Alert.active{
+    visibility: visible;
+}
+.Alert p{
+    font-size: 10px;
+    color: red;
+    font-weight: bold;
+}
+.weatherDetails .humidity,
+.weatherDetails .wind{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    transform: translateY(-100%);
+}
+.weatherDetails.active .humidity,
+.weatherDetails.active .wind{
+    transform: translateY(0%);
+    transition: transform 1s ease;
+    transition-delay: 1.0s;
+}
+
+.weatherDetails i{
+    font-size: 56px;
+    margin-right: 10px;
+}
+.weatherDetails .humidity{
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+.weatherDetails .wind{
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+.weatherDetails span{
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 500;
+}
+.weatherDetails p{
+    font-size: 14px;
+    font-weight: 500;
+}
+.notFound{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 110px;
+}
+.notFound img{
+    width: 65%;
+}
+.notFound p{
+    font-size: 22px;
+    font-weight: 200;
+    margin-top: 12px;
+}
+.unitToggle {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.unitToggle:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
