@@ -10,15 +10,16 @@
 <body>
     <div class="container">
         <div class="searchBox">
-            <i class="bx bxMap"></i>
-            <input id="searchBttn" type="text" placeholder="Enter your location">
-            <button class="bx bxSearch">Search</button>
+            <i class="bx bx-map"></i>
+            <input id="searchBttn" type="text" placeholder="Start typing a country..." autocomplete="off">
+            <div class="autocomplete-items"></div>
+            <button class="bx bx-search">Search</button>
         </div>
         <div class="weatherBox">
             <div class="box">
                 <div class="infoWeather">
                     <div class="weather">
-                        <img src="ProjImages/cloud.png"></img>
+                        <img src="ProjImages/cloud.png">
                         <p class="temperature"> 0 <span>°C</span></p>
                         <button class="unitToggle">Convert to °F</button>
                         <p class="description">Broken clouds</p>
@@ -28,33 +29,33 @@
         </div>
         <div class="weatherDetails">
             <div class="humidity">
-                <i class="bx bxWater"></i>
+                <i class="bx bx-water"></i>
                 <div class="text">
-                <div class="infoHumidity">
-                    <span>0%</span>
+                    <div class="infoHumidity">
+                        <span>0%</span>
+                    </div>
+                    <p>Humidity</p>
                 </div>
-                <p>Humidity</p>
             </div>
-            </div>
-        <div class="wind">
-            <i class="bx bxWind"></i>
-            <div class="text">
-                <div class="infoWind">
-                    <span>0Km/h</span>
+            <div class="wind">
+                <i class="bx bx-wind"></i>
+                <div class="text">
+                    <div class="infoWind">
+                        <span>0Km/h</span>
+                    </div>
+                    <p>Wind Speed</p>
                 </div>
-                <p>Wind Speed</p>
             </div>
         </div>
-    </div>
-    <div class="notFound">
-        <div class="box">
-            <img src="ProjImages/404.png">
-            <p> Location not found !!</p>
+        <div class="notFound">
+            <div class="box">
+                <img src="ProjImages/404.png">
+                <p> Location not found !!</p>
+            </div>
         </div>
-    </div>
-    <div class="Alert">
-        <p>!! Warning, it's too cold out there !!</p>
-    </div>
+        <div class="Alert">
+            <p>!! Warning, it's too cold out there !!</p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
